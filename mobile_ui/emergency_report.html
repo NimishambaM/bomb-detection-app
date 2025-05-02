@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Report Emergency</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; background-color: #f4f4f4; }
+        .header { background-color: #ff4444; padding: 20px; color: white; }
+        input, textarea { width: 80%; padding: 10px; margin: 10px 0; font-size: 16px; }
+        button { background-color: #ff4444; color: white; padding: 15px 30px; border: none; font-size: 18px; margin-top: 20px; }
+        button:hover { background-color: #cc0000; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Report Suspicious Object</h1>
+    </div>
+    <form action="/submit_alert" method="POST">
+        <input type="text" name="alert_type" placeholder="Type of Alert" required><br>
+        <textarea name="description" placeholder="Describe the object" required></textarea><br>
+        <button type="submit">Submit Report</button>
+    </form>
+</body>
+</html>

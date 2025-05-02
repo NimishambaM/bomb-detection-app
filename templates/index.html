@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bomb Detection Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ccc; padding: 10px; text-align: left; }
+        th { background-color: #f44336; color: white; }
+    </style>
+</head>
+<body>
+    <h1>Emergency Alerts</h1>
+    <table>
+        <tr><th>Type</th><th>Description</th><th>Reported Time</th></tr>
+        {% for alert in alerts %}
+        <tr>
+            <td>{{ alert.type }}</td>
+            <td>{{ alert.description }}</td>
+            <td>{{ alert.time }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
